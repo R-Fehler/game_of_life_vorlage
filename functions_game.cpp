@@ -5,8 +5,12 @@ MatrixXi create_field2d(unsigned int nx, unsigned int ny) {
 }
 
 void init_field2d(MatrixXi &field, const double frac) {
+  // solange die summe der koeff. / die anzahl der koeff. kleiner als frac ist
+  // setze ein zufalliges feld der matrix = 1
+  while (field.sum() / field.size() < frac) {
+    field(rand() % field.rows(), rand() % field.cols()) = 1;
+  }
   // Z.B. rand()%nx -> zufällige Zahl zwischen 0 und nx-1
-  // in field object aendern
 }
 void make_step(MatrixXi &field, MatrixXi &field_tmp) {}
 
