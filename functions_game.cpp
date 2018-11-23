@@ -13,6 +13,8 @@ void init_field2d(MatrixXi &field, const double frac) {
   // Z.B. rand()%nx -> zufällige Zahl zwischen 0 und nx-1
 }
 void make_step(MatrixXi &field, MatrixXi &field_tmp) {
+  // aufsummieren der nachbarn ueber schleife. .sum() von .block()
+  // geht nicht denke ich da periodische randbedingungen...
   // Regeln des Games hier implementieren.
   // if zelle==1{
 
