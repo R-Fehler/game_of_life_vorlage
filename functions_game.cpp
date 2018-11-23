@@ -12,7 +12,17 @@ void init_field2d(MatrixXi &field, const double frac) {
   }
   // Z.B. rand()%nx -> zufällige Zahl zwischen 0 und nx-1
 }
-void make_step(MatrixXi &field, MatrixXi &field_tmp) {}
+void make_step(MatrixXi &field, MatrixXi &field_tmp) {
+  // Regeln des Games hier implementieren.
+  // if zelle==1{
+
+  // if anzahl nachbarn <=1 --> Zelle=0
+  // if (anzahl nachbarn >=2 AND anzahl nachbarn <=3)
+  //
+  // if anzahl nachbarn >=4 --> Zelle=0
+  //}
+  // if zelle ==0 AND anzahl nachbarn==3 ; zelle =1;
+}
 
 void plot_field(MatrixXi const &field, const unsigned int nstep) {
   char Dateiname[256];
